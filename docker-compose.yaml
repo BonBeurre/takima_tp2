@@ -3,7 +3,7 @@ version: '3.7'
 services:
   backend:
     build:
-      context: .\backend_api\simple-api-student-main
+      context: .\backend_api\simpleapi
       dockerfile: Dockerfile
     image: backend_api
     networks:
