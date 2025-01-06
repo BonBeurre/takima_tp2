@@ -44,17 +44,17 @@ jobs:
   
       - name: Build image and push backend
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend_api ./backend_api/simple-api-student-main
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend_api .\backend_api\simple-api-student-main
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend_api
   
       - name: Build image and push database
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/takima-db ./database
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/takima-db .\database
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/takima-db
   
       - name: Build image and push httpd
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/http_server ./http_server
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/http_server .\http_server
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/http_server
       
 
